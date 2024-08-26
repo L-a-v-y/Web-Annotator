@@ -67,5 +67,5 @@ Web Annotator is a Chrome extension that allows users to annotate webpages by hi
 ### Setup
 
 1. Clone the repository.
-2. Install the dependencies.
+2. Install the dependencies. ('npm install') 
 
