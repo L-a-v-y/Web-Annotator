@@ -1,0 +1,409 @@
+body {
+  width: 380px;
+  height: 510px;
+  background-color: rgba(81, 119, 23, 0.25);
+  transition: 0.4s;
+  font-family: "Montserrat", sans-serif;
+  overflow: auto;
+  background-image: url("images/5153829.jpg");
+}
+.background_image {
+  opacity: 0.5;
+}
+h4 {
+  font-weight: bold
+}
+html {
+  overflow: auto;
+}
+
+.wide-body {
+  width: 600px;
+  transition: 0.3s;
+}
+
+/* NAV */
+.tab {
+  background-color: rgb(0, 3, 7);
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 10px 0;
+  overflow: hidden;
+  border: 1px solid transparent;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.tabcontent {
+  text-align: center;
+  margin-top: 75px;
+}
+
+.tab button {
+  outline: none;
+  padding: 5px 2px;
+  margin: 0 8px;
+  transition: 0.3s;
+  color: aliceblue;
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 8px;
+  font-family: "Montserrat", sans-serif;
+}
+
+button.tablinks.active,
+button:hover {
+  border-bottom: 1px solid #93b9ec;
+  border-radius: 20px;
+}
+
+.notesDiv {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #e99d9d;
+  -webkit-transition: 0.4s;
+  transition: 0.5s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: rgb(226, 127, 127);
+  -webkit-transition: 0.4s;
+  transition: 0.3s;
+}
+
+/* turns background blue when "on" */
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.off,
+.toggle-msg {
+  display: none;
+}
+
+/* LOADING */
+.loader {
+  border: 4px solid #7895f6;
+  border-radius: 50%;
+  border-top: 4px solid blue;
+  border-bottom: 4px solid blue;
+  width: 18px;
+  height: 18px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+  margin: auto;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* NOTES */
+.fa-expand,
+.fa-compress {
+  float: right;
+  margin-top: 2px;
+  background-color: rgba(31, 95, 164, 0.3);
+  padding: 6px;
+  border-radius: 8px;
+}
+
+.notes-url {
+  color: rgb(9, 18, 62);
+  font-weight: bold;
+}
+
+hr {
+  width: 78%;
+  border-color: rgba(191, 134, 134, 0.651);
+  margin: 0 auto;
+}
+
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+.fa-compress {
+  display: none;
+}
+
+.searchDiv,
+.url-header {
+  display: none;
+}
+
+.searchDiv {
+  float: right;
+}
+
+.wrap {
+  overflow-wrap: break-word;
+}
+
+.searchBar {
+  outline: none;
+  padding: 5px;
+  border-radius: 8px 0 0 8px;
+  margin-bottom: 20px;
+  width: 70%;
+}
+
+.fa-search {
+  background-color: rgb(124, 176, 222);
+  padding: 6px 8px 6px 6px;
+  border-radius: 0 8px 8px 0;
+}
+
+.detail {
+  margin: 15px 0;
+  padding: 0 5px;
+}
+
+summary {
+  outline: none;
+}
+
+.fa-external-link,
+.fa-external-link:visited {
+  margin-left: 5px;
+  color: #2196f3;
+}
+
+.fa-chevron-down {
+  margin-left: 5px;
+  color: #2196f3;
+}
+
+.highlights {
+  width: 85%;
+  margin: 0 auto;
+  padding-top: 12px;
+}
+
+.url:visited,
+a:visited,
+a,
+.url {
+  color: #2196f3;
+}
+
+.url {
+  text-align: left;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  margin-right: 6px;
+}
+
+.notes-url {
+  width: 86%;
+  margin: auto;
+  text-align: left;
+  font-size: 15px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.spacer {
+  height: 30px;
+}
+
+.num {
+  color: #43a567;
+}
+
+.reset {
+  margin-left: 8px;
+}
+
+.colorPicker {
+  border: none;
+}
+
+.reset {
+  height: 25px;
+  background-color: #6daf83;
+  color: #000;
+  border-radius: 8px;
+  outline: none;
+}
+
+.thisWebsite {
+  font-weight:bold;
+  height: 25px;
+  background-color:  #60acea;
+  border-radius: 8px;
+  outline: none;
+}
+
+.example-text {
+  background-color: #0d8836;
+}
+
+.example-text-div {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* FOOTER */
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0px;
+  height: 40px;
+  text-align: center;
+  background-color: #000;
+  color: rgb(212, 221, 229);
+  font-size: 14px;
+}
+
+.footer > p {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 0px;
+}
+
+.instructions {
+  display: none;
+  width: 90%;
+  margin: auto;
+}
+
+.instructions > ol > li {
+  margin-top: 15px;
+  text-align: left;
+}
+
+.instructions-down {
+  display: none;
+  color: rgb(172, 204, 231);
+}
+
+.fa-chevron-up {
+  margin-left: 10px;
+}
+
+h4 {
+  text-align: left;
+  color: #a2e2b7;
+}
+
+.searchDiv {
+  float: right;
+  width: 95%;
+  margin-bottom: 25px;
+  margin-top: 50px;
+}
+
+.searchBar input {
+  outline: none;
+  padding: 20px;
+  border-radius: 8px 0 0 8px;
+  width: calc(80% - 20px);
+  box-sizing: border-box;
+}
+
+.searchBar i {
+  background-color: aliceblue;
+  padding: 20px;
+  border-radius: 0 8px 8px 0;
+  box-sizing: border-box;
+}
+
+.notesDiv {
+  display: none;
+  padding-top: 30px;
+}
+
+#notes {
+  margin-top: 30px;
+}
+
+.export-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.export-button:hover {
+  background-color: #0b7dda;
+}
